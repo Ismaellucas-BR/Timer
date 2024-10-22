@@ -1,20 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-:focus{
-    outline: 0;
-    box-shadow: 0 0 0 2px #7c7cba;
+:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px #7c7cba;
 }
-body, 
-input, 
-textarea, 
+body,
+input,
+textarea,
 button {
-    font-family: 'Roboto', sans-serif; 
-    font-weight: 400;
-    font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.active {
+  color: #00b75f;
+}
+.th-style {
+  @apply bg-gray-60 p-4 text-left text-gray-10 text-sm;
+}
+.td-style {
+  @apply bg-gray-70 border-t-4 border-gray-80 p-4 text-sm;
+}
+td:first-child {
+  padding-left: 1.5rem;
+  width: 50%;
+}
+td:last-child {
+  padding-right: 1.5rem;
+}
+
+.status {
+  @apply flex items-center gap-2;
+}
+.alert::before {
+  @apply content-[''] w-2 h-2 rounded-full bg-yellow-50;
+}
+.danger::before {
+  @apply content-[''] w-2 h-2 rounded-full bg-red-50;
+}
+.no-problem::before {
+  @apply content-[''] w-2 h-2 rounded-full bg-green-50;
 }
